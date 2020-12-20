@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Weather_app
+{
+    public class WeatherInfo
+    {
+        public Coord Coord { get; set; }
+        public List<Weather> Weather { get; set; }
+        public string Base { get; set; }
+        public Main Main { get; set; }
+        public float visibility { get; set; }
+        public Wind Wind { get; set; }
+        public Clouds Clouds { get; set; }
+        public double dt { get; set; }
+        public Sys Sys { get; set; }
+        public int timezone { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public int cod { get; set; }
+    }
+
+    public class Coord
+    {
+        public double lon { get; set; }
+        public double lat { get; set; }
+    }
+
+    public class Weather
+    {
+        public int id { get; set; }
+        public string main { get; set; }
+        public string description { get; set; }
+        public string icon { get; set; }
+    }
+
+    public class Main
+    {
+        public float temp { get; set; }
+        public float feels_like { get; set; }
+        public float temp_min { get; set; }
+        public float temp_max { get; set; }
+        public int pressure { get; set; }
+        public int humidity { get; set; }
+    }
+
+    public class Wind
+    {
+        public float speed { get; set; }
+        public int deg { get; set; }
+    }
+
+    public class Clouds
+    {
+        public int all { get; set; }
+    }
+
+    public class Sys
+    {
+        public int type { get; set; }
+        public int id { get; set; }
+        public string country { get; set; }
+        public double sunrise { get; set; }
+        public double sunset { get; set; }
+    }
+}

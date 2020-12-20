@@ -1,0 +1,925 @@
+﻿<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="label1.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>74, 58</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="search_field.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="search_field.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>47, 131</value>
+  </data>
+  <data name="search_field.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>460, 32</value>
+  </data>
+  <data name="search_field.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="search_field.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;search_field.Name" xml:space="preserve">
+    <value>search_field</value>
+  </data>
+  <data name="&gt;&gt;search_field.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_field.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_field.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="button1.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>213, 169</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>135, 32</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Get forecast!</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="City_Name.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="City_Name.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Microsoft Sans Serif, 18pt</value>
+  </data>
+  <data name="City_Name.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>605, 228</value>
+  </data>
+  <data name="City_Name.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="City_Name.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 36</value>
+  </data>
+  <data name="City_Name.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="City_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;City_Name.Name" xml:space="preserve">
+    <value>City_Name</value>
+  </data>
+  <data name="&gt;&gt;City_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;City_Name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;City_Name.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>-138, -98</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>54, 20</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>4</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value> label3</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>TopCenter</value>
+  </data>
+  <data name="label3.Visible" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="search_by.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="search_by.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="search_by.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>47, 13</value>
+  </data>
+  <data name="search_by.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>88, 23</value>
+  </data>
+  <data name="search_by.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="search_by.Text" xml:space="preserve">
+    <value>Search by:</value>
+  </data>
+  <data name="&gt;&gt;search_by.Name" xml:space="preserve">
+    <value>search_by</value>
+  </data>
+  <data name="&gt;&gt;search_by.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_by.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_by.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="intro.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 16pt, style=Bold</value>
+  </data>
+  <data name="intro.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>184, 13</value>
+  </data>
+  <data name="intro.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>493, 39</value>
+  </data>
+  <data name="intro.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="intro.Text" xml:space="preserve">
+    <value>Weather search by city</value>
+  </data>
+  <data name="intro.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;intro.Name" xml:space="preserve">
+    <value>intro</value>
+  </data>
+  <data name="&gt;&gt;intro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;intro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;intro.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="temperature.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="temperature.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 28pt</value>
+  </data>
+  <data name="temperature.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>670, 143</value>
+  </data>
+  <data name="temperature.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 62</value>
+  </data>
+  <data name="temperature.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;temperature.Name" xml:space="preserve">
+    <value>temperature</value>
+  </data>
+  <data name="&gt;&gt;temperature.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;temperature.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;temperature.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="wind.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="wind.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="wind.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>548, 369</value>
+  </data>
+  <data name="wind.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="wind.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;wind.Name" xml:space="preserve">
+    <value>wind</value>
+  </data>
+  <data name="&gt;&gt;wind.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;wind.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;wind.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="condition.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="condition.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="condition.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>594, 304</value>
+  </data>
+  <data name="condition.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="condition.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;condition.Name" xml:space="preserve">
+    <value>condition</value>
+  </data>
+  <data name="&gt;&gt;condition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;condition.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;condition.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="humidity.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="humidity.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="humidity.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>548, 428</value>
+  </data>
+  <data name="humidity.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="humidity.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;humidity.Name" xml:space="preserve">
+    <value>humidity</value>
+  </data>
+  <data name="&gt;&gt;humidity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;humidity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;humidity.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pressure.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="pressure.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="pressure.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>706, 369</value>
+  </data>
+  <data name="pressure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="pressure.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;pressure.Name" xml:space="preserve">
+    <value>pressure</value>
+  </data>
+  <data name="&gt;&gt;pressure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pressure.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pressure.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="search_type.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="search_type.Items" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="search_type.Items1" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="search_type.Items2" xml:space="preserve">
+    <value>ZIP</value>
+  </data>
+  <data name="search_type.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>50, 36</value>
+  </data>
+  <data name="search_type.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>128, 31</value>
+  </data>
+  <data name="search_type.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;search_type.Name" xml:space="preserve">
+    <value>search_type</value>
+  </data>
+  <data name="&gt;&gt;search_type.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;search_type.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;search_type.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="tooltip.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tooltip.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="tooltip.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>50, 96</value>
+  </data>
+  <data name="tooltip.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>457, 32</value>
+  </data>
+  <data name="tooltip.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>21</value>
+  </data>
+  <data name="tooltip.Text" xml:space="preserve">
+    <value>Enter name of the city</value>
+  </data>
+  <data name="tooltip.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing.Common">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;tooltip.Name" xml:space="preserve">
+    <value>tooltip</value>
+  </data>
+  <data name="&gt;&gt;tooltip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tooltip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tooltip.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 14pt</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>619, 90</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>117, 32</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>22</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Currently:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="icon.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>577, 125</value>
+  </data>
+  <data name="icon.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>100, 100</value>
+  </data>
+  <data name="icon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="icon.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;icon.Name" xml:space="preserve">
+    <value>icon</value>
+  </data>
+  <data name="&gt;&gt;icon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;icon.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;icon.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="visibility.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="visibility.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="visibility.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>706, 428</value>
+  </data>
+  <data name="visibility.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="visibility.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;visibility.Name" xml:space="preserve">
+    <value>visibility</value>
+  </data>
+  <data name="&gt;&gt;visibility.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;visibility.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;visibility.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="feels_like.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="feels_like.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="feels_like.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>594, 271</value>
+  </data>
+  <data name="feels_like.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="feels_like.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;feels_like.Name" xml:space="preserve">
+    <value>feels_like</value>
+  </data>
+  <data name="&gt;&gt;feels_like.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;feels_like.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;feels_like.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, System.Private.CoreLib">
+    <value>150</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, System.Private.CoreLib">
+    <value>100</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Temperature</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, System.Private.CoreLib">
+    <value>120</value>
+  </data>
+  <data name="listViewForecast.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="listViewForecast.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>50, 248</value>
+  </data>
+  <data name="listViewForecast.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>457, 328</value>
+  </data>
+  <data name="listViewForecast.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;listViewForecast.Name" xml:space="preserve">
+    <value>listViewForecast</value>
+  </data>
+  <data name="&gt;&gt;listViewForecast.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewForecast.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listViewForecast.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>50, 217</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>286, 28</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>26</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Forecast (double-click on item):</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="celcius.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="celcius.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="celcius.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>706, 21</value>
+  </data>
+  <data name="celcius.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>45, 29</value>
+  </data>
+  <data name="celcius.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>27</value>
+  </data>
+  <data name="celcius.Text" xml:space="preserve">
+    <value>C</value>
+  </data>
+  <data name="&gt;&gt;celcius.Name" xml:space="preserve">
+    <value>celcius</value>
+  </data>
+  <data name="&gt;&gt;celcius.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;celcius.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;celcius.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="farengheit.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="farengheit.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="farengheit.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>766, 21</value>
+  </data>
+  <data name="farengheit.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>42, 29</value>
+  </data>
+  <data name="farengheit.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>28</value>
+  </data>
+  <data name="farengheit.Text" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="&gt;&gt;farengheit.Name" xml:space="preserve">
+    <value>farengheit</value>
+  </data>
+  <data name="&gt;&gt;farengheit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;farengheit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;farengheit.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="average_temp.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="average_temp.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="average_temp.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>50, 594</value>
+  </data>
+  <data name="average_temp.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="average_temp.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;average_temp.Name" xml:space="preserve">
+    <value>average_temp</value>
+  </data>
+  <data name="&gt;&gt;average_temp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;average_temp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;average_temp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="maximum_temp.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="maximum_temp.Font" type="System.Drawing.Font, System.Drawing.Common">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="maximum_temp.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>376, 594</value>
+  </data>
+  <data name="maximum_temp.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>0, 25</value>
+  </data>
+  <data name="maximum_temp.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;maximum_temp.Name" xml:space="preserve">
+    <value>maximum_temp</value>
+  </data>
+  <data name="&gt;&gt;maximum_temp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maximum_temp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;maximum_temp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>8, 20</value>
+  </data>
+  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAYABgAAD/4QCuRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
+        AAcAAAB6AAAALAAAAABVTklDT0RFAABDAFIARQBBAFQATwBSADoAIABnAGQALQBqAHAAZQBnACAAdgAx
+        AC4AMAAgACgAdQBzAGkAbgBnACAASQBKAEcAIABKAFAARQBHACAAdgA4ADAAKQAsACAAcQB1AGEAbABp
+        AHQAeQAgAD0AIAA4ADIACv/bAEMABgQEBQQEBgUFBQYGBgcJDgkJCAgJEg0NCg4VEhYWFRIUFBcaIRwX
+        GB8ZFBQdJx0fIiMlJSUWHCksKCQrISQlJP/bAEMBBgYGCQgJEQkJESQYFBgkJCQkJCQkJCQkJCQkJCQk
+        JCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJP/AABEIAeAC2gMBIgACEQEDEQH/xAAfAAAB
+        BQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYT
+        UWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFla
+        Y2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK
+        0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJ
+        Cgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEK
+        FiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeI
+        iYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T1
+        9vf4+fr/2gAMAwEAAhEDEQA/AK1FFFfaH55YKKKKACiiigAooooCwUUUUALTlNMpwpASCl7U0U6kUFFL
+        SUgEpKWigBKKKKYC5pQTSUDnikBZi55NTZqKPhcU40jREgkI707zvaoaSiw7krS1GzE9aSkosK4UUUUw
+        CiigUAI54qOnyGo6aJYtBGRSUtDAjPBoFD/epAaCR1FJS0gCkNLSUAJRS0lACUhFOpDTEMIpKcRSGmIb
+        RS0lMLBRRRQAtKKSikA6lptLmgBaWkooAWikooAWkoooAKKKKACiiigBKKWkoAKKKKAEooooAKKKKADN
+        FFFABRRRQAtFJRQAtFJRQAtBoNFACUUUUAFFFFABRRRQAlFLSUAJRS0lMAopaSgAoopaAEooooAKWkpa
+        AEpwptKKTAkFOpgpwpDHUlLRSGIaSlooAbRSmkpgFPiHNMp8Z5oBE6nBqQ1EOOakByKTNEIaKU0lIApK
+        WigBKKWkpgFFFIWAoAY55ptBOTmimSwooooERv8AepKRvvUCgkdS00U4Uhi0UlLQAlFLSUAJRiiimAhp
+        pFONBpiGGkpxFJQIbRS0UwEpaKSgBaWkopAOFFIKUGgBaKSloAKWkooAWkoooAKKKKAEopaSgAooooAK
+        MUUUAJRS0lABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFGKKKAEooopgJS0UUAFFFFIApK
+        WigBKWiigAooooAetOFMFPFIaHUUlLSGJRS0lACUlLSUwClXgikpaAJxTg2KYhytOpFDwwNFR0biKLDu
+        SUUwPTtwosAtIcU0uB0phYmhILjmfHSmZz1pKKoQUUUUCFoopG4BpAQk80CkpRTIFzTqaDS0hjqWm0tI
+        YtJS0lABSUtFACUlLRTAaaQinUmKYhtJTjSUCG0tFFACUtFFMApaSlpALRmkpaAFopKWgAooooGFFFFA
+        BSUtFAhKKKKACiiigAooooASilpKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoxRRQAlFFFABR
+        RRQAUUUUAFFFFABRRRQAUUUUAOFOFMFPFA0OFLSClqRoKKKKBiUlLSUCEpaSimBJGe1S1ApwamHIpDQU
+        hpaQ0DEoopKYBRRRTASiiigQUUUUAFNkPy06onbcaBMbRRRQSKKUUlFAxwpabSikMdRSUtIAooooASii
+        igApKWkpgIaQinUhpiG0lONJQISiiigAooooAWikooAWlpM0UAOopKKAFopKWgYUUUUAJRS0lAgooooA
+        KKKKACiiigApKXFJQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUlLRmgBKKKKACiiigAooooAKKKKACi
+        iigAooooAUU4U0U4UDQ4U4U0U6pGFFFFAxKDS0hoBiGiikoELUiNxio6KARPRUYkI608MD3oKuBpDSmk
+        poBKKKKYBRRUsUfc0gsRhCe1BQjrU5YKMCoySetK4OxA6sfpURBFXKjkjDDihMTVyvRSkYODSVRAtFFF
+        AC0tNpaBjqXNNpc0hi0UCikAUlLRQAlFFFACUUUUwEpKWkpiENJTqSgQlFFFABRRRQAtFJS0ALRSUtAB
+        S0lFAC0UlFAwpaKKACkpaKAEooooEFFFFABRRRQAUlLRQAlFFFABRRRQAUUUUAFFFFABRRRQAZpMUtGK
+        AEooooAKKKKACiiigAopaSgAooooAKKKKAFFKKQUooGPFLTRThSGLRRS0hiUlLRQA2ilpKBBRRRQAUUU
+        UAKHIpfM9aZSGmguShgaXioKM0x3LCkE1KWOMVFCMLUlSxoSiiikAUUUUCI5YwRmq9W26VVbqapCkJRR
+        S0yQooooGKKUU2loGOpabS0gFopKWkAlFFFABSUtJTAKTFLRQA2ilpKYhMUlONJQISiiigAooooAWikp
+        aAFopKWgYUtJRQAtFJRQAtJS0UAFJRRQAUUUUAFFFFABSUtFACUUUUCCiiigAooooAKKKKACiiigApKX
+        FH40AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFKKSgUDHinCmCnCkxjhS0lLSGJRQaKAEpKWg0AJRRRQ
+        IKKKKACkpaQ0wENJSmimImgbIxUtV4jhqsVLKQUlLRSGJRS0lACOcKaqHrViZsLiq9UiZBS0lFMkWigU
+        UDClpKKBjqWm0tIBaKKKQBRRRQAUUUUAJRS0lMBKKWkpgJRS0lAhKKWkoEFFFFABRRRQAUUUUAFLQKKB
+        hRRRQMWkoooEFFFLQMSiiigAooooEFFFFACUUtFACUUUUAFFFFAgooopAFFFFMAooooAKKKKACiiigAo
+        oooAKKKKACiiigAooooAKBRRQMcKcKYKeKTGOopKUUhi0hooNACUUtJQAlFFFAgooooAKKKKAENJS0lN
+        AAOKnSQEVXoosBcBBoqqHIPWnib1pWHcmpjyhaiaUnpxTDzQkDYruWNNooqiAooooGLRSUtABRRRQMWi
+        kpaAFpaSikAtFFFIAooooAKSlpKACiiimgEopaSmAlFLSUAJRS0lAgooooEFFFFABS5pKKBi0UlLQAUU
+        UUDCiiigAooooAKKKKACiiigAooooEFFJS0AJRS0lABRS0lABRRRQIKKKKBhRRRQAUUUUAFFFFABRRRQ
+        AUUUUAFFFFABRRRQAopwpopwpDHClpBS0hhiiiigApKWigBDSUtJQAUUUUAFFFFABSUtJTEIaSlpKYBR
+        RRQAUlLRQISiiigAooooAKWkooAWiiigYUtJRQAuaWkozSAWlpKKQC0UUUAFFFJQAtJRRTASilpKEAUU
+        UUwENJTqSgQlFLikoAKKKKACiiigApaSigBaKKKBhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAgpKKKAFo
+        opKAFpKKKAClpKKACiiigAopaSgAooooAKKKKACiiloASiiigAooooAUUopKUUDHCnCmilqRoWlpM0tA
+        CUUUUAJRS0lACUUGigAooooAKKKKAEpKXFIaYgpKWkpgFFFFABRRRQAlFFFAhaSiigBaKKKBhRRRQAtF
+        JS0AFLSClpAFLSUUALRSUtIBKKKKACiiimAUUUUAJRRRTASilpKAEopaSgQUUUUAFFFFABS0UlAxaKKK
+        ACiiigAooooAKKKKACiiigAooooAKKKKACkpaKACiiigBKKKWgQUUUUDCiiigAooooAKKKKACiiigAop
+        KWgBKWiigApRSUCgBwpwpopwpALRRmikMWkpaSgApKWkoASilpKACiiigAooooAKSlpKBCGiiimAlFLS
+        UwCiinKmaQDQpNOEZqdYwKcFFK47FcRGl8qrGBRSuOxB5VIYyKsYowKLhYqFSKSrLx5FQMuKpMTQ2iil
+        piCikpaAFopKWkAUUUUgFopKKACiiimAUUUUAFJS0UwExRRRQAlFFFABRRRQAlLSUtABSUtFABRRRQAU
+        UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUYoAKSlooASilpKAFooooAKKKKACiiigAooooAKKKKACiii
+        gAooooAKKKKAHClFIKUUgHUUUUhhRS0GgBKKKKAEpKdSGgBKKKKACiiloASiiigBKQ0ppKYgpKWimAqj
+        Jqwi4FMiTvU3SobKSEopaKQCUUUUAFFFFMBajdM1JRSGVGXFNqy6ZqBlwatMloSkopaYgpaSigBaKKM0
+        gFpKKWkAlFLRQMSiiimIKKKKAEopaQ0wCiiigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiilo
+        ASiiigAooooAKKKKACiiigApKWigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAFFOFNFKKT
+        BDhS0gpaQxaSgUtACUUUUAFIaWkoASilpKACiiigAooooAKQ0tJTASnxrk03HNTxjihgh6jApaWioGJR
+        RRigAooooAKKKKACiiigBDzUMi1PUUvSmhkFFFFWQFFFFAAKWkopALRRRSGFFFFABRRRQIKKKKYBRRRQ
+        AlFFFMApKWigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoooxQAUU
+        UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAC0tJSikwQ4UtNpaQxaWkooAKKKKACkpaKAENJSmk
+        oAKKKKACiiigAooooAB1qePpUFTRmhgiWiiipKCkpaKAEooooAKKKKBBRRRQAVFKalqCY00MioooqyAo
+        oooAKKKKAFopKWkAUUUUDCiiikAUUUUwCiiigApKWkoEFFFFABSUtFMBKKKKACiiigAooooAKKKKACii
+        igAooooAKKKKACiiigAooooAKKKKACiiigAopaKAEopaKAEoopaAEoopaAEopaKAEopaKACkpaSgAopa
+        SgBaUUlFIEOFKKQUtIYtFFFABRRRQAUUUUAJRRSUAFFFFABRRRQAUUUUAFPjODTKVeDQBZHSlpqHinVJ
+        QUUUUAFJS0UAJRS0UAJRQKPegLAelVpTzVhzxVZzk00JjaKKKskKKKKACiiigAooooGLRRRSAKKKKACi
+        iigAooooAKKKKACiiimAlFFFAgpKWigBKKWigBKKKKACiiloASilooASilooASiiloASiiigAopaKAEo
+        paKAEpaKSgBaKKKACiiigAooooAKSlooAKKKKACiiigAooooAKKKKACgUUCkA4UopopaQx1FJS0AFFFF
+        AwooooEJRilpKAEooooAKKKKACiiigAooooAljapc1WBwalV6TQ0S0U0NmlBpWGLRRRQMKKKQ0CCgnFN
+        ZwKhaTPSmkJsdI9QnmgnNFUhXCijFGDTEFFLg0bTSGJRS7TRtNACUUu00YIoASlpKWgAoooosAUUUUgC
+        iiimAUUUUAFFFFACUUtJQAUUUUAFFFFMQUUUUAFFFFABRRRQAUUUUAFFFFABSUtFABRRRQAUUUUAFFFJ
+        QAtFFFAwooooAKKKKACiiigAooooAKKKKACiiigAooooAKBRRQAtLSUtIBRS0gpaQBRRRQMKKKKACkpa
+        SgApKWigQlFFFABRRRQAUUUUAJS5NFJQA4ORTxJUVFAFgPTt1Vg2KXeaLDuTlwKjeWoyxpANxxRYLgSW
+        NKEJqRVApaLhYj8unCMU6loHYbtFGBS0tACYoxRS0DExRS0UAJikIFOpKAI2Wm4qamMtFyWhlFHSimIK
+        KKKQBRRRQAUUUUwCiiigBKKWigApKWkoAKKWkoAKKKKYBRRRQIKKKKBhRRRQAUUUUAFFFFABRRRQAUUU
+        UCCkpaKAsFFFFAwooooAKKKKACiiigAooooAKKKKACiiigAooooAKBRRQAtKKSlFSAtFAooBC0UUUDCi
+        iigBKKWigBDRRRQISiiigAooooAKKKKACiiigBKKWkoAKKKKYBjNSquBSIuOafQUkFFFFIYUUUUAFFFF
+        ABRRRQAUUUUAFFFFABSUtFADGWoyMVNTWWgTRHRQRiimSFFFFABRRRQAUUUUAFFFFABRRSUALSUtFACU
+        UtJTAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiij8aACilopAJRS0UAJRS0UAFJS0UAFJS0UAJ
+        RS0UAJRilooASilooASilooAKKKKAFpaSlpALRRRQMKKKKACiiigBKKKKACkpaSgQUUUUAFFFFABRRRQ
+        AUlLRQAlPRc801VyamAwKY0gooopFBRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUlLRQAxlqMips
+        UxloJaGUUUUxBRRRQAUUUUAFFFFABRRRQAUUUUAFJS0UAJRS0UwEopaKAEpaKKQCUUtFACUUtFACUUtF
+        ACUUtFACUUtJQAtFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFKKSlFABS0lLSAWiii
+        gYUUUUAFFFFABSUtJQAUlLRQAlFFFAhaSlpKBhRS0lABRRT0XNAWHIuBTqKKCgpKKKACiiigAooooAKK
+        KKACiiigAooooAKKKKACiiigAooooAKQjNLRQBEy4ptTEZFRMMUEtCUUUUCCiiigAooooAKKKKACiiim
+        AUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRxRRigAooopAFFFLQAlFFLQAlFFAoAKKKKAC
+        iiigAopaSgAooooAKKKWgBKUUlLQAUtJS0DFooooAKKKKACiig0AFFFFACUUtJQAUUlLQAUUUUAFFFFA
+        ABzUyjApkY71JQUkJRS0lABRRRQAUUUUAFFFFACUtFFACUtFFABRRRQAUlLRQAUlLRQAUlLRQAUlLRQA
+        lRuKkqN6BMZRRRQSFFFFABRRRQAUUUtACUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQ
+        AUcUtJQAtFFFACUtFFABRRRQAUUUUAFFFFABRRRQAUUUUAJS0UUAFFFFABRRRQAUtJS0DFopKWgApaKK
+        AEooooAKKKKACiiigBKKWkoAKKKKACiilHWgCVRgUtIvSloLCiiigBKKWkoFYKKKKACiiigAooooAKKK
+        KACiiigAooooAKKKKACiiigAooooAKjepKifrQD2G0UUUEBRR3ooASloooAKKKKACiiigApKWigAoooo
+        AKKKKACiiigAooooAKKKKACkpaKACkpaKACkpaKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigApaSloGFLRRQAUUUtACUYpaKAEopaSgAooooAKSlooASilooASilooAlXpS01DxT6C0
+        JRS0lABRRRigApKWigBKKWigBKKWigQlFFFAWCiiigLBRRRQFgooooCwUUUUBYKKKKACon61LUTdaAY2
+        ilpKCAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAWig0U
+        DCiiigAooo70AFFFBoAKKKKACiiigAooooAKKDRQAUUUUAFFFFABQKKKAFooooAKWiigAooooASilooA
+        QUtFFACUUtJQAUUUUAFFFFADkNS1CpwalFBSFooopDEopaKAEooopgFFFFABRRRQAUUUUAFFFFABRRRQ
+        AUUUUAFFFFABRRRQAh6VCetStwKioJYUUUUCCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooNFAB
+        RRRQAUUUUAFFFBoAKKKKACkpaKACiiigAopaSgAoopaAEoopaAEopaSgAopaSgAooooAKKKKACilooAS
+        iiloASiiigBaBRRQAtFFFABRRRRcAooooAKKKKACiiigBKO1FFABRRRQADrUqnIqKpIzQND6KKKRQUUU
+        UwCkpaKAEopaKLgJRS0UAJRS0UAJRS0lABRS0lABRRRQAUUUUAFFFFADZDxioqfIeaZQSwooooEFFFFA
+        BRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFGPeiigBaKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigApaSloAKKKKQBRRRQAUUUUAFFFFAwooooEF
+        FFFACUUtJTAKVeDSUUDJwaWmIc0+kUJRS0UAJRS0lABRRRQAUUUUAFFFFACUtFFMANFFFABRRRQAUlLR
+        QAUhpaY7Y4oAjY5NJS0UECUUtFABRRRQAlFLRQAUlLRQAlFLRQAlFLRQAUlLRQAlLRRQAUlLRQAUUUUA
+        FFFFABSUtFABRRRQAUmaWigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK
+        KAClpMUtABRRRSGFFFFAC0UUUBYSiiigAooooAKKKKACiiimIKKKKAHIcGpBUINSK1BSH0UUUhhRRRQA
+        UlFFAC0lFFABRS0lABRRRQAUUUUAFFFFABRQeKYz+lACs4FRk5NJRTJbCiiigQUUUUAFFFFABRRRQAUU
+        UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAC0UUUAFFFFABRRRQAUUUUAFF
+        FFABRRRQAUUUUAJS0UUAFFFFABRRRQAUlLRQAUUUUAFFFFIYtFFFABRRRQMKKKKACjFFFACUUUtACUUU
+        UCCiiigAooooAer08MDUNGaBk9FRB8U8MDQMdRSA0tABRRRQAUUUUAFFFFABRRSFgKAFprMBTWf0plAr
+        ilifpSUUUxBRRRQFgooooCwUUUUAFJS0UCEpaKKAEopaKAEopaKAEopaKACiiigBKKWigBKKWigApKWi
+        gBKKWigBKKWigBKKWigBKKWigAooopDCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAC
+        iiigAooooAWikpaBhRRRQAUUUUAFFFFABRRRQAUUUUAJRS4ooASiiigAooooAKKKWgBKKKKAHBiKcHqO
+        igCYMDS5qClDEUBcmoqMSUvmUDH0hIFMMlNJyaBXHGT0ppJPWkpaAEopaKACiiigAooooAKKKKAEopaM
+        UAJRS0lAgooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiimAUUUtIYl
+        FFLQAlLSUtACUUtFACUUtJQAUUtJQAUUUtACUtFFACUUUtACUUtFACUUtJQAUUtFACUtFFABRRRQAUUt
+        FACUUtFACUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAJRS0UAJRS0UAJRRS0AJRS0UAJS0UUAFLRi
+        gCgAxmlCGpFXFLSuWokflml2U+igfKhmz3ppXFS0hGaLi5SKkp7Lim0yLCUYpaSgBKKWigBKKKKACiii
+        gAopaSgAopaSgAoopaAEoopaAEooooAKKKKACiiigAopaSgAopaSgR//2Q==
+</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>893, 634</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>WeatherApp</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>WeatherApp</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
