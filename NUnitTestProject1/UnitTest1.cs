@@ -7,7 +7,7 @@ namespace NUnitTestProject1
 {
     public class Tests
     {
-        Provider provider = new Provider();
+        Provider.Provider provider = new Provider.Provider();
         string test_data = "{\"cod\":\"200\",\"message\":0,\"cnt\":5," +
             "\"list\":[" +
             "{\"dt\":1608498000," +
@@ -23,23 +23,23 @@ namespace NUnitTestProject1
         [Test]
         public void Test_average_forecast_temperature()
         {
-            Provider provider = new Provider();
-            var avg = decimal.Parse(provider.AverageForecastTemp(false, test_data));
+            Provider.Provider provider = new Provider.Provider();
+            var avg = decimal.Parse(provider.AverageForecastTemp(false, test_data, null, null, 0)) ;
             Assert.AreEqual(0.74, avg);
         }
 
         [Test]
         public void Test_max_forecast_temperature()
         {
-            Provider provider = new Provider();
-            var max = decimal.Parse(provider.HighestForecastTemp(false, test_data));
+            Provider.Provider provider = new Provider.Provider();
+            var max = decimal.Parse(provider.HighestForecastTemp(false, test_data, null, null, 0));
             Assert.AreEqual(1.2, max);
         }
 
         [Test]
         public void Test_if_data_parsed_correctly()
         {
-            Provider provider = new Provider();
+            Provider.Provider provider = new Provider.Provider();
             var result = provider.TestProvider(test_data);
             Assert.AreEqual("Kaunas", result.city.name);
             Assert.AreEqual("LT", result.city.country);

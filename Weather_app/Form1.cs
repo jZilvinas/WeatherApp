@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Provider;
 
 namespace Weather_app
 {
@@ -41,7 +42,8 @@ namespace Weather_app
                 var forecastWeatherData = (ForecastInfo)null;
                 string highestForecastTemp = null;
                 string averageForecastTemp = null;
-                Provider provider = new Provider();
+
+                Provider.Provider provider = new Provider.Provider();
                 string units = null;
 
 
@@ -57,12 +59,13 @@ namespace Weather_app
 
                 if (search_type.Text == "City")
                 {
-                    string city_param = "q=" + search_field.Text + "&units="+units;
-                    currentWeatherData = provider.GetCurrentWeather(city_param);
-                    forecastWeatherData = provider.GetForecasts(city_param);
+                    //string city_param = "q="+search_field.Text+"&units="+units;
+                    string city_param = search_field.Text;
+                    currentWeatherData = provider.GetCurrentWeather(city_param, null, units, 1) ;
+                    forecastWeatherData = provider.GetForecasts(city_param, null, units, 1) ;
 
-                    averageForecastTemp = provider.AverageForecastTemp(true, city_param);
-                    highestForecastTemp = provider.HighestForecastTemp(true, city_param);
+                     averageForecastTemp = provider.AverageForecastTemp(true, city_param, null, units, 1);
+                     highestForecastTemp = provider.HighestForecastTemp(true, city_param, null, units, 1);
 
 
                 }
@@ -71,30 +74,29 @@ namespace Weather_app
                     string[] coords = search_field.Text.Split(" ");
                     string latitude = coords[0];
                     string longtitude = coords[1];
-                    string coord_param = "lat=" + latitude + "&lon=" + longtitude + "&units="+units;
 
-                    currentWeatherData = provider.GetCurrentWeather(coord_param);
-                    forecastWeatherData = provider.GetForecasts(coord_param);
+                    currentWeatherData = provider.GetCurrentWeather(latitude, longtitude, units, 2);
+                    forecastWeatherData = provider.GetForecasts(latitude, longtitude, units, 2);
 
-                    averageForecastTemp = provider.AverageForecastTemp(true, coord_param);
-                    highestForecastTemp = provider.HighestForecastTemp(true, coord_param);
+                    averageForecastTemp = provider.AverageForecastTemp(true, latitude, longtitude, units, 2);
+                    highestForecastTemp = provider.HighestForecastTemp(true, latitude, longtitude, units, 2);
                 }
                 else if (search_type.Text == "ZIP")
                 {
                     string[] zip_var = search_field.Text.Split(" ");
                     string zip = zip_var[0];
                     string code = zip_var[1];
-                    string zip_param = "zip="+zip+","+code+"&units="+units;
+                    string zip_param = zip+","+code;
 
-                    currentWeatherData = provider.GetCurrentWeather(zip_param);
-                    forecastWeatherData = provider.GetForecasts(zip_param);
+                    currentWeatherData = provider.GetCurrentWeather(zip_param, null, units, 3);
+                    forecastWeatherData = provider.GetForecasts(zip_param, null, units, 3);
 
-                    highestForecastTemp = provider.HighestForecastTemp(true,zip_param);
-                    averageForecastTemp = provider.AverageForecastTemp(true,zip_param);
+                    highestForecastTemp = provider.HighestForecastTemp(true, zip_param, null, units, 3);
+                    averageForecastTemp = provider.AverageForecastTemp(true, zip_param, null, units, 3);
                 }
 
 
-                icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
+                //icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
                 City_Name.Text = currentWeatherData.name +", " + currentWeatherData.Sys.country;
                 temperature.Text = currentWeatherData.Main.temp.ToString() + " "+units_arr[0];
                 wind.Text = "Wind: "+currentWeatherData.Wind.speed + " "+units_arr[1];
@@ -108,7 +110,7 @@ namespace Weather_app
 
                 
 
-
+                
                 for (var i=0; i<forecastWeatherData.cnt;i++)
                     {
                         ListViewItem item = new ListViewItem();
