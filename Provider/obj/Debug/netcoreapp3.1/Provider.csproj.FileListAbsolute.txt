@@ -1,0 +1,10 @@
+C:\Users\Lenovo\source\repos\Provider\bin\Debug\netcoreapp3.1\Provider.deps.json
+C:\Users\Lenovo\source\repos\Provider\bin\Debug\netcoreapp3.1\Provider.dll
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\Provider\bin\Debug\netcoreapp3.1\Provider.pdb
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.csproj.ResolveComReference.cache
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.dll
+C:\Users\Lenovo\source\repos\Provider\obj\Debug\netcoreapp3.1\Provider.pdb
