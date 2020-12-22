@@ -96,7 +96,7 @@ namespace Weather_app
                 }
 
 
-                //icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
+                icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
                 City_Name.Text = currentWeatherData.name +", " + currentWeatherData.Sys.country;
                 temperature.Text = currentWeatherData.Main.temp.ToString() + " "+units_arr[0];
                 wind.Text = "Wind: "+currentWeatherData.Wind.speed + " "+units_arr[1];

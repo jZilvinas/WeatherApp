@@ -44,15 +44,15 @@ namespace Provider
             return result;
 
         }
-        /*
+        
         public Image GetIcons(string icon)
         {
             WebClient webClient = new WebClient();
             Stream stream = webClient.OpenRead("http://openweathermap.org/img/wn/" + icon + "@2x.png");
 
             return Image.FromStream(stream);
-        }*/
-
+        }
+        
 
         public ForecastInfo TestProvider(string test_data)
         {
@@ -65,7 +65,7 @@ namespace Provider
         public string AverageForecastTemp(bool fuse, string param_1, string param_2, string units_param, int search_id)
         {
             double avgTemp = 0;
-            var result = fuse ? GetForecasts(param_1, null, units_param, 1) : TestProvider(param_1);
+            var result = fuse ? GetForecasts(param_1, param_2, units_param, search_id) : TestProvider(param_1);
 
             for (int i = 0; i < result.cnt; i++)
             {
@@ -81,7 +81,7 @@ namespace Provider
         public string HighestForecastTemp(bool fuse, string param_1, string param_2, string units_param, int search_id)
         {
             double highestTemp = 0;
-            var result = fuse ? GetForecasts(param_1, null, units_param, 1) : TestProvider(param_1);
+            var result = fuse ? GetForecasts(param_1, param_2, units_param, search_id) : TestProvider(param_1);
 
             for (int i = 0; i < result.cnt; i++)
             {

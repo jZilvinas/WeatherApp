@@ -33,7 +33,7 @@ namespace Weather_app
 
             var details_data = provider.GetForecasts(city_name, null,unit_param,1);
             date.Text = (details_data.list[number].dt_txt.DayOfWeek + " " + details_data.list[number].dt_txt.Month + "-" + details_data.list[number].dt_txt.Day+" "+details_data.list[number].dt_txt.TimeOfDay).ToString();
-            //icon.Image = provider.GetIcons(details_data.list[number].weather[0].icon);
+            icon.Image = provider.GetIcons(details_data.list[number].weather[0].icon);
             temp.Text = details_data.list[number].main.temp.ToString() + " "+units_arr[0];
             condition.Text = details_data.list[number].weather[0].main + ", " + details_data.list[number].weather[0].description;
             feels_like.Text = "Feels like: "+details_data.list[number].main.feels_like.ToString() +" "+units_arr[0];
