@@ -214,6 +214,7 @@
             this.celcius.Name = "celcius";
             this.celcius.TabStop = true;
             this.celcius.UseVisualStyleBackColor = false;
+            this.celcius.Click += new System.EventHandler(this.celcius_Click);
             // 
             // farengheit
             // 
@@ -221,6 +222,7 @@
             this.farengheit.BackColor = System.Drawing.Color.Transparent;
             this.farengheit.Name = "farengheit";
             this.farengheit.UseVisualStyleBackColor = false;
+            this.farengheit.Click += new System.EventHandler(this.farengheit_Click);
             // 
             // average_temp
             // 

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "/x++vCteqQLKxu+W33Mx0WWw2iMRfSrfxYn+rI7ynSMoy3ZP26jwckNIvHXoVGswTlsraEqbYgl7Kvfcxg2KqA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\Weather_app\\Weather_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

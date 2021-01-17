@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net.Http;
@@ -91,6 +90,7 @@ namespace Provider
                 }
             }
             highestTemp = Math.Round(highestTemp, 2);
+
             return highestTemp.ToString();
         }
 

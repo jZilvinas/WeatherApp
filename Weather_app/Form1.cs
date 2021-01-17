@@ -1,43 +1,57 @@
 ﻿using System;
 using System.Windows.Forms;
 using Provider;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace Weather_app
 {
     
     public partial class WeatherApp : Form
     {
+        string input_field= null;
         public WeatherApp()
         {
             InitializeComponent();
+            Bitmap bm = new Bitmap(Properties.Resources.imgIcon);
+            this.Icon = Icon.FromHandle(bm.GetHicon());
             listViewForecast.View = View.Details;
             search_type.SelectedItem = "City";
         }
 
-
-        public string[] GetUnits()
+        public Dictionary<string, string> GetUnits()
         {
-            string unit = null;
+            Dictionary<string, string> units = new Dictionary<string, string>();
             if (celcius.Checked)
             {
-                unit = "°C, m/s, hPA, km" ;
+                units.Add("temperature", "°C");
+                units.Add("speed", "m/s");
+                units.Add("pressure", "hPA");
+                units.Add("visibility", "km");
             }
             else if (farengheit.Checked)
             {
-                unit = "°F, ml/h, col., miles";
+                units.Add("temperature", "°F");
+                units.Add("speed", "mph");
+                units.Add("pressure", "col.");
+                units.Add("visibility", "miles");
             }
-            string[] units = unit.Split(", ");
+
             return units;
         }
-        
+
+
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] units_arr = GetUnits();
+            if (search_field.Text == "")
+            {
+                search_field.PlaceholderText = "Enter value to search.";
+                return;
+            }
 
             try
              {
-                listViewForecast.Items.Clear();
-                listViewForecast.View = View.Details;
+                search_field.PlaceholderText = null;
                 var currentWeatherData = (WeatherInfo)null;
                 var forecastWeatherData = (ForecastInfo)null;
                 string highestForecastTemp = null;
@@ -56,84 +70,95 @@ namespace Weather_app
                     units = "imperial";
                 }
 
-
-                if (search_type.Text == "City")
-                {
-                    //string city_param = "q="+search_field.Text+"&units="+units;
-                    string city_param = search_field.Text;
-                    currentWeatherData = provider.GetCurrentWeather(city_param, null, units, 1) ;
-                    forecastWeatherData = provider.GetForecasts(city_param, null, units, 1) ;
-
-                     averageForecastTemp = provider.AverageForecastTemp(true, city_param, null, units, 1);
-                     highestForecastTemp = provider.HighestForecastTemp(true, city_param, null, units, 1);
-
-
-                }
-                else if (search_type.Text == "Coordinates")
-                {
-                    string[] coords = search_field.Text.Split(" ");
-                    string latitude = coords[0];
-                    string longtitude = coords[1];
-
-                    currentWeatherData = provider.GetCurrentWeather(latitude, longtitude, units, 2);
-                    forecastWeatherData = provider.GetForecasts(latitude, longtitude, units, 2);
-
-                    averageForecastTemp = provider.AverageForecastTemp(true, latitude, longtitude, units, 2);
-                    highestForecastTemp = provider.HighestForecastTemp(true, latitude, longtitude, units, 2);
-                }
-                else if (search_type.Text == "ZIP")
-                {
-                    string[] zip_var = search_field.Text.Split(" ");
-                    string zip = zip_var[0];
-                    string code = zip_var[1];
-                    string zip_param = zip+","+code;
-
-                    currentWeatherData = provider.GetCurrentWeather(zip_param, null, units, 3);
-                    forecastWeatherData = provider.GetForecasts(zip_param, null, units, 3);
-
-                    highestForecastTemp = provider.HighestForecastTemp(true, zip_param, null, units, 3);
-                    averageForecastTemp = provider.AverageForecastTemp(true, zip_param, null, units, 3);
-                }
-
-
-                icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
-                City_Name.Text = currentWeatherData.name +", " + currentWeatherData.Sys.country;
-                temperature.Text = currentWeatherData.Main.temp.ToString() + " "+units_arr[0];
-                wind.Text = "Wind: "+currentWeatherData.Wind.speed + " "+units_arr[1];
-                condition.Text = currentWeatherData.Weather[0].main + ", " + currentWeatherData.Weather[0].description;    
-                feels_like.Text = "Feels like " + currentWeatherData.Main.feels_like.ToString() + " "+units_arr[0]+".";
-                pressure.Text = "Pressure: "+currentWeatherData.Main.pressure.ToString()+" "+units_arr[2];
-                humidity.Text = "Humidity: "+currentWeatherData.Main.humidity.ToString()+" %";
-                visibility.Text = "Visibility: " + (currentWeatherData.visibility / 1000).ToString()+" "+units_arr[3];
-                average_temp.Text = "Average temperature: " + averageForecastTemp + " " + units_arr[0];
-                maximum_temp.Text = "Highest temerature: " + highestForecastTemp + " " + units_arr[0];
-
+                input_field = search_field.Text;
                 
 
-                
-                for (var i=0; i<forecastWeatherData.cnt;i++)
-                    {
-                        ListViewItem item = new ListViewItem();
-                        item.Text = (forecastWeatherData.list[i].dt_txt.DayOfWeek+" "+ forecastWeatherData.list[i].dt_txt.Month+"-"+ forecastWeatherData.list[i].dt_txt.Day).ToString();
-                        item.SubItems.Add(forecastWeatherData.list[i].dt_txt.TimeOfDay.ToString());
-                        item.SubItems.Add(forecastWeatherData.list[i].main.temp.ToString()+ " "+units_arr[0]);
-                        listViewForecast.Items.Add(item);
+                var parametersForRequest = searchParameter();
+                currentWeatherData = provider.GetCurrentWeather(parametersForRequest.Item1, parametersForRequest.Item2, units, parametersForRequest.Item3);
+                forecastWeatherData = provider.GetForecasts(parametersForRequest.Item1, parametersForRequest.Item2, units, parametersForRequest.Item3);
 
-                    }
+                averageForecastTemp = provider.AverageForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, units, parametersForRequest.Item3);
+                highestForecastTemp = provider.HighestForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, units, parametersForRequest.Item3);
+
+                listViewForecast.Items.Clear();
+                listViewForecast.View = View.Details;
+                addInfo(currentWeatherData, forecastWeatherData, averageForecastTemp, highestForecastTemp);
+
 
                 search_field.Clear(); 
 
             }
             catch (Exception)
             {
-                search_field.Text = "Enter value to search.";
+                search_field.PlaceholderText = "Enter value to search.";
             }
 
+        }
+
+        public Tuple<string, string, int> searchParameter()
+        {
+            var generalParam = (dynamic)null;
+            if (search_type.Text == "City")
+            {
+                string city_param = input_field;
+                int searchID = 1;
+                generalParam= Tuple.Create(city_param, "", searchID);
+            }
+
+            else if (search_type.Text == "Coordinates")
+            {
+                string[] coords = input_field.Split(" ");
+                string latitude = coords[0];
+                string longtitude = coords[1];
+                int searchID = 2;
+                generalParam = Tuple.Create(latitude, longtitude, searchID);
+            }
+
+            else if (search_type.Text == "ZIP")
+            {
+                string[] zip_var = input_field.Split(" ");
+                string zip = zip_var[0];
+                string code = zip_var[1];
+                string zip_param = zip + "," + code;
+                int searchID = 3;
+                generalParam = Tuple.Create(zip_param, "", searchID);
+            }
+            return generalParam;
+        }
+
+
+        public void addInfo(WeatherInfo currentWeatherData, ForecastInfo forecastWeatherData, string averageForecastTemp, string highestForecastTemp)
+        {
+            Dictionary<string, string> units = GetUnits();
+            Provider.Provider provider = new Provider.Provider();
+            icon.Image = provider.GetIcons(currentWeatherData.Weather[0].icon);
+            City_Name.Text = currentWeatherData.name + ", " + currentWeatherData.Sys.country;
+            temperature.Text = currentWeatherData.Main.temp.ToString() + " " + units["temperature"];
+            wind.Text = "Wind: " + currentWeatherData.Wind.speed + " " + units["speed"];
+            condition.Text = currentWeatherData.Weather[0].main + ", " + currentWeatherData.Weather[0].description;
+            feels_like.Text = "Feels like " + currentWeatherData.Main.feels_like.ToString() + " " + units["temperature"] + ".";
+            pressure.Text = "Pressure: " + currentWeatherData.Main.pressure.ToString() + " " + units["speed"];
+            humidity.Text = "Humidity: " + currentWeatherData.Main.humidity.ToString() + " %";
+            visibility.Text = "Visibility: " + (currentWeatherData.visibility / 1000).ToString() + " " + units["visibility"];
+            average_temp.Text = "Average temperature: " + averageForecastTemp + " " + units["temperature"];
+            maximum_temp.Text = "Highest temerature: " + highestForecastTemp + " " + units["temperature"];
+
+
+            for (var i = 0; i < forecastWeatherData.cnt; i++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = (forecastWeatherData.list[i].dt_txt.DayOfWeek + " " + forecastWeatherData.list[i].dt_txt.Month + "-" + forecastWeatherData.list[i].dt_txt.Day).ToString();
+                item.SubItems.Add(forecastWeatherData.list[i].dt_txt.TimeOfDay.ToString());
+                item.SubItems.Add(forecastWeatherData.list[i].main.temp.ToString() + " " + units["temperature"]);
+                listViewForecast.Items.Add(item);
+
+            }
         }
 
 
         private void search_type_SelectedIndexChanged(object sender, EventArgs e)
         {
+            search_field.PlaceholderText = null;
             string text = search_type.Text;
             if (text == "City")
             {
@@ -155,6 +180,7 @@ namespace Weather_app
             }
         }
 
+
         private void listViewForecast_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Forecast detailed_view_form = new Forecast();
@@ -162,6 +188,72 @@ namespace Weather_app
             detailed_view_form.Show_details(listViewForecast.SelectedIndices[0], City_Name.Text, farengheit.Checked, celcius.Checked, GetUnits());
         }
 
-       
+
+
+        private void farengheit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var currentWeatherData = (WeatherInfo)null;
+                var forecastWeatherData = (ForecastInfo)null;
+                string highestForecastTemp = null;
+                string averageForecastTemp = null;
+
+                Provider.Provider provider = new Provider.Provider();
+
+
+                var parametersForRequest = searchParameter();
+
+                currentWeatherData = provider.GetCurrentWeather(parametersForRequest.Item1, parametersForRequest.Item2, "imperial", parametersForRequest.Item3);
+                forecastWeatherData = provider.GetForecasts(parametersForRequest.Item1, parametersForRequest.Item2, "imperial", parametersForRequest.Item3);
+
+                averageForecastTemp = provider.AverageForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, "imperial", parametersForRequest.Item3);
+                highestForecastTemp = provider.HighestForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, "imperial", parametersForRequest.Item3);
+
+                listViewForecast.Items.Clear();
+                listViewForecast.View = View.Details;
+
+                addInfo(currentWeatherData, forecastWeatherData, averageForecastTemp, highestForecastTemp);
+            }
+
+            catch(Exception)
+            {
+                farengheit.Checked = true;
+            }
+        }
+
+
+
+        private void celcius_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var currentWeatherData = (WeatherInfo)null;
+                var forecastWeatherData = (ForecastInfo)null;
+                string highestForecastTemp = null;
+                string averageForecastTemp = null;
+
+                Provider.Provider provider = new Provider.Provider();
+
+
+                var parametersForRequest = searchParameter();
+
+                currentWeatherData = provider.GetCurrentWeather(parametersForRequest.Item1, parametersForRequest.Item2, "metric", parametersForRequest.Item3);
+                forecastWeatherData = provider.GetForecasts(parametersForRequest.Item1, parametersForRequest.Item2, "metric", parametersForRequest.Item3);
+
+                averageForecastTemp = provider.AverageForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, "metric", parametersForRequest.Item3);
+                highestForecastTemp = provider.HighestForecastTemp(true, parametersForRequest.Item1, parametersForRequest.Item2, "metric", parametersForRequest.Item3);
+
+                listViewForecast.Items.Clear();
+                listViewForecast.View = View.Details;
+
+                addInfo(currentWeatherData, forecastWeatherData, averageForecastTemp, highestForecastTemp);
+            }
+
+            catch(Exception)
+            {
+                celcius.Checked=true;
+            }
+        }
     }
 }
